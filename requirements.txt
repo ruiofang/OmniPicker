@@ -1,0 +1,4 @@
+PyQt5>=5.15,<6
+pymodbus>=3.6,<4
+pyserial>=3.5,<4
+python-can>=4.3,<5
