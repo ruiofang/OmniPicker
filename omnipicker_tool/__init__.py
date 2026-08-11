@@ -1,1 +1,0 @@
-"""OmniPicker RS485 Modbus desktop tool."""

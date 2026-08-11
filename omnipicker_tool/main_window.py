@@ -60,7 +60,7 @@ class ValueEditor(QWidget):
 class MainWindow(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
-        self.service: SerialProtocolService = OmniPickerModbusService()
+        self.service: SerialProtocolService = OmniPickerCanService()
         self.setWindowTitle("OmniPicker CAN / RS485 Tool")
         self.resize(900, 640)
 
@@ -126,6 +126,7 @@ class MainWindow(QMainWindow):
         self.protocol_combo.addItem("自定义协议", "custom")
         self.protocol_combo.addItem("CAN (SocketCAN)", "can")
         self.protocol_combo.addItem("CAN-FD (SocketCAN)", "canfd")
+        self.protocol_combo.setCurrentIndex(self.protocol_combo.findData("can"))
 
         for baudrate in DEFAULT_BAUDRATES:
             self.baudrate_combo.addItem(str(baudrate), baudrate)

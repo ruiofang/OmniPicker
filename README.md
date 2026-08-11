@@ -89,7 +89,7 @@ sudo ip link set can0 up
 ip -details link show can0
 ```
 
-启动工具后选择 `CAN (SocketCAN)` 或 `CAN-FD (SocketCAN)`、选择 `can0` 并填写正确的 CAN ID。CAN 与自定义串口协议一样，每次发送控制帧后立即接收一帧状态，不支持独立查询。
+启动工具后默认选择 `CAN (SocketCAN)`；如需 CAN-FD，可切换为 `CAN-FD (SocketCAN)`。选择 `can0` 并填写正确的 CAN ID。CAN 与自定义串口协议一样，每次发送控制帧后立即接收一帧状态，不支持独立查询。
 
 带拨码开关的夹爪切换到 CAN/CAN-FD 时，3、4 应为 ON，其他拨码为 OFF。硬件版本 20 的 Pin 3/4 分别为 CAN_H/CAN_L；硬件版本 30 的 Pin 3/4 分别为 CAN_L/CAN_H，请按机身版本确认线序。
 
